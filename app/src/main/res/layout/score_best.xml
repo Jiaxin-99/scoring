@@ -7,8 +7,8 @@
 
     <TextView
         android:id="@+id/tv_score"
-        android:gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="best score: " />
 </LinearLayout>

@@ -15,7 +15,7 @@ public class BestScore extends AppCompatActivity {
     TextView tv_score;
 
     int lastScore;
-    int best1, best2,best3;
+    int best1, best2,best3, best4, best5;
 
 
 
@@ -32,12 +32,33 @@ public class BestScore extends AppCompatActivity {
         best1 = preferences.getInt("best1", 0);
         best2 = preferences.getInt("best2", 0);
         best3 = preferences.getInt("best3", 0);
+        best4 = preferences.getInt("best4", 0);
+        best5 = preferences.getInt("best5", 0);
 
         //replace if there is a high score
 
-        if(lastScore > best3){
-            best3 = lastScore;
+        if(lastScore > best5){
+            best5 = lastScore;
             SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("best5",best5);
+            editor.apply();
+        }
+        if(lastScore > best4){
+            int temp = best4;
+            best4 = lastScore;
+            best5 = temp;
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("best5",best5);
+            editor.putInt("best4",best4);
+            editor.apply();
+        }
+
+        if(lastScore > best3){
+            int temp = best3;
+            best3 = lastScore;
+            best4 = temp;
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("best4",best4);
             editor.putInt("best3",best3);
             editor.apply();
         }
@@ -66,7 +87,9 @@ public class BestScore extends AppCompatActivity {
         tv_score.setText("Last Score: " + lastScore + "\n" +
                 "BEST 1: " + best1 + "\n" +
                 "BEST 2: " + best2 + "\n" +
-                "Best 3: " + best3 + "\n");
+                "Best 3: " + best3 + "\n" +
+                "BEST 4: " + best4 + "\n" +
+                "BEST 5: " + best5 + "\n");
     }
 
     @Override
