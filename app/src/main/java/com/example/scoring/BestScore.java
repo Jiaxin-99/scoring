@@ -15,7 +15,7 @@ public class BestScore extends AppCompatActivity {
     TextView tv_score;
 
     int lastScore;
-    int best1, best2,best3, best4, best5;
+    int best1, best2, best3, best4, best5;
 
 
 
