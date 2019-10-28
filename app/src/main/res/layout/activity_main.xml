@@ -25,7 +25,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
-        android:text="Add Score" />
+        android:text="+1" />
 
     <Button
         android:id="@+id/b_end"
