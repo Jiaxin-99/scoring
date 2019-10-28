@@ -10,5 +10,5 @@
         android:layout_width="match_parent"
         android:layout_height="35dp"
         android:gravity="center"
-        android:text="best score: " />
+        android:text="Best Score: " />
 </LinearLayout>
