@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
                 SharedPreferences preferences = getSharedPreferences("PREFS",0);
                 SharedPreferences.Editor editor = preferences.edit();
-                editor.putInt("lastScore",score);
+                editor.putInt("LastScore",score);
                 editor.apply();
 
                 Intent intent = new Intent(getApplicationContext(), BestScore.class);
