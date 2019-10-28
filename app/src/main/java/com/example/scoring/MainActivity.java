@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 score++;
-                tv_score.setText("SCORE: "+score);
+                tv_score.setText("SCORE:"+score);
             }
         });
 
